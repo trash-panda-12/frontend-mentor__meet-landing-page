@@ -1,7 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./js/**/*.js', './index.html'],
+  purge: {
+    enabled: 'true',
+    content: ['./js/**/*.js', './index.html'],
+  },
   darkMode: false,
   theme: {
     container: {
@@ -17,7 +20,7 @@ module.exports = {
         'primary' : {
           DEFAULT: '#4D96A9',
           'light': '#8FE3F9',
-          'active': '#71C0D4',
+          'active': '#71C0D4'
         },
         'secondary' : {
           DEFAULT: '#855FB1',
