@@ -14,18 +14,30 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary' : '#aa5cdb',
-        'secondary': '#1b1938',
-        'dark-blue': '#090b1a',
+        'primary' : {
+          DEFAULT: '#4D96A9',
+          'light': '#8FE3F9',
+          'active': '#71C0D4',
+        },
+        'secondary' : {
+          DEFAULT: '#855FB1',
+          'light': '#D9B8FF',
+          'active': '#B18BDD'
+        },
+        'black': {
+          'DEFAULT' : '#28283D',
+          'light': '#87879D'
+        }
       },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.serif],
-        'secondary': ['Lexend Deca', ...defaultTheme.fontFamily.sans]
+        'sans': ['Red Hat Display', ...defaultTheme.fontFamily.serif],
       }
     }
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

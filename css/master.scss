@@ -3,3 +3,9 @@
   @apply absolute inset-0 object-cover w-full h-full;
   mix-blend-mode: multiply;
 }
+
+
+.button {
+  @apply px-8 py-4 text-white rounded-full transition-all;
+
+}
