@@ -8,31 +8,38 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet">
-    <title>Tailwind CSS Template</title>
+    <title>Meet Landing Page</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="./js/application.js" defer></script>
+
+
   </head>
-  <body>
+  <body class="overflow-x-hidden">
 
     <section class="mt-12 bg-white lg:mt-24">
       <div class="container">
-        <img src="./images/logo.svg" class="w-32 h-auto mx-auto 2xl:w-24" alt="Logo">
+        <img src="./images/logo.svg" class="w-32 h-auto mx-auto 2xl:w-24 logo" alt="Logo">
       </div>
     </section>
 
-    <section class="grid items-center grid-cols-2 mx-auto mt-12 overflow-hidden lg:mt-24 gap-y-12 lg:gap-24 lg:grid-cols-3 2xl:gap-12">
-      <div>
-        <img src="./images/person-group-1.png" class="w-full h-auto transform -translate-x-6 lg:-translate-x-12" alt="">
+    <section class="grid items-center grid-cols-2 mx-auto mt-12 lg:mt-24 gap-y-12 lg:gap-24 lg:grid-cols-3 2xl:gap-12">
+      <div class="">
+        <img  src="./images/person-group-1.png" class="w-full h-auto transform -translate-x-6 image-bubble lg:-translate-x-12" alt="">
       </div>
 
       <div class="order-last max-w-xl col-span-2 px-4 mx-auto space-y-8 text-center lg:space-y-8 lg:order-none lg:col-span-1 lg:px-0 lg:max-w-none">
-        <h1 class="text-4xl font-black text-black sm:text-5xl lg:text-6xl">
+        <h1 class="text-4xl font-black text-black sm:text-5xl lg:text-6xl hero-text">
           Group Chat <br>for Everyone
         </h1>
 
-        <p class="text-lg text-black-light">
+        <p class="text-lg text-black-light hero-text">
           Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
         </p>
 
-        <div class="justify-center space-y-8 sm:space-x-4 sm:flex sm:space-y-0">
+        <div class="justify-center space-y-8 sm:space-x-4 sm:flex sm:space-y-0 hero-text">
           <button class="button bg-primary hover:bg-primary-active">
             Download <span class="pl-2 text-primary-light"> v1.3</span>
           </button>
@@ -43,13 +50,13 @@
         </div>
       </div>
 
-      <div>
-        <img src="./images/person-group-2.png" class="w-full h-auto transform translate-x-6 lg:translate-x-12" alt="">
+      <div class="">
+        <img src="./images/person-group-2.png" class="w-full h-auto transform translate-x-6 image-bubble lg:translate-x-12" alt="">
       </div>
 
     </section>
 
-    <section class="mt-12 text-center lg:mt-24">
+    <section class="mt-12 text-center lg:mt-24 number-block-1">
       <span class="block w-px h-20 mx-auto bg-black-light">
       </span>
       <span class="flex items-center justify-center w-12 h-12 mx-auto bg-white border rounded-full border-black-light text-black-light">
@@ -58,28 +65,28 @@
     </section>
 
     <section class="my-12 bg-white lg:my-24">
-      <div class="container">
+      <div class="container" id="block-images">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div class="aspect-w-1 aspect-h-1 rounded-xl">
-            <img src="./images/block-image-1.jpg" class="object-cover w-full h-full rounded-lg shadow-lg" alt="Long Distance Communication">
+            <img src="./images/block-image-1.jpg" class="object-cover w-full h-full rounded-lg shadow-lg image-block" alt="Long Distance Communication">
           </div>
 
           <div class="aspect-w-1 aspect-h-1 rounded-xl">
-            <img src="./images/block-image-2.jpg" class="object-cover w-full h-full rounded-lg shadow-lg" alt="Age Friendly">
+            <img src="./images/block-image-2.jpg" class="object-cover w-full h-full rounded-lg shadow-lg image-block" alt="Age Friendly">
           </div>
 
           <div class="aspect-w-1 aspect-h-1 rounded-xl">
-            <img src="./images/block-image-3.jpg" class="object-cover w-full h-full rounded-lg shadow-lg" alt="Business Connections">
+            <img src="./images/block-image-3.jpg" class="object-cover w-full h-full rounded-lg shadow-lg image-block" alt="Business Connections">
           </div>
 
           <div class="aspect-w-1 aspect-h-1 rounded-xl">
-            <img src="./images/block-image-4.jpg" class="object-cover w-full h-full rounded-lg shadow-lg" alt="Leisure Uses">
+            <img src="./images/block-image-4.jpg" class="object-cover w-full h-full rounded-lg shadow-lg image-block" alt="Leisure Uses">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="my-12 bg-white lg:my-24">
+    <section class="my-12 bg-white lg:my-24" id="outro">
       <div class="container text-center">
         <div class="max-w-xl mx-auto spacemax-w-sm-y-8 sm:max-w-3xl lg:space-y-8">
           <h2 class="text-lg font-black uppercase text-primary">
@@ -112,7 +119,7 @@
       <div class="container relative">
         <div class="grid max-w-xl grid-cols-1 mx-auto lg:grid-cols-3 gap-y-8 lg:gap-24 lg:max-w-none">
           <div>
-            <p class="text-5xl font-black text-center text-white lg:text-4xl lg:text-left">
+            <p class="text-4xl font-black text-center text-white lg:text-left">
               Experience more together
             </p>
           </div>
@@ -132,6 +139,7 @@
       </div>
 
     </footer>
+
 
   </body>
 </html>
